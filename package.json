@@ -1,0 +1,16 @@
+{
+  "name": "react-nextjs-starter-kit",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
