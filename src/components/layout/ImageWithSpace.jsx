@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const WIDTH_BREAK = '600px';
+const WIDTH_BREAK = '700px';
 
 // fundo geral/externo do site
 const StyledFlex = styled.div`
@@ -24,16 +24,19 @@ const StyledImage = styled.div`
 //todo conteudo interno da pagina
 const StyledContainer = styled.div`
   background-color: white;
-  padding: 30px;
+  padding: 30px 50px;
 
   @media (min-width: ${WIDTH_BREAK}) {
-    width: 100%;
-    min-width: calc(${WIDTH_BREAK} - 60px);
+    min-width: calc(${WIDTH_BREAK} - 100px);
   }
 
   @media (max-width: ${WIDTH_BREAK}) {
     min-width: 100%;
   }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 //Component JSX:

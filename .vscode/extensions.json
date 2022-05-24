@@ -1,6 +1,13 @@
 {
   "recommendations": [
     "sumitsaha.learn-with-sumit-theme",
-    "rocketseat.rocketseatreactjs"
+    "rocketseat.rocketseatreactjs",
+    "thertzlor.semantic-rainbow",
+    "gulajavaministudio.mayukaithemevsc",
+    "daltonmenezes.aura-theme",
+    "fisheva.eva-theme",
+    "tinkertrain.theme-panda",
+    "taniarascia.new-moon-vscode",
+    "liviuschera.noctis"
   ]
 }
