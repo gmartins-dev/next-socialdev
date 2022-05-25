@@ -2,6 +2,7 @@ import connect from 'next-connect';
 import Joi from 'joi';
 import validate from '../../../lib/middlewares/validation';
 import { signupUser } from '../../../modules/user/user.services';
+import createHandler from '../../../lib/middlewares/nextConnect';
 
 //validação de dados para cadastro
 const postSchema = Joi.object({
@@ -12,7 +13,7 @@ const postSchema = Joi.object({
   password: Joi.string().required().max(50).min(6),
 });
 
-const signup = connect().post(
+const signup = createHandler().post(
   validate({ body: postSchema }),
   (req, res) => {
     signupUser(req.body);
