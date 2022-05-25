@@ -1,4 +1,9 @@
-import { createGlobalStyle } from 'styled-components';
+import {
+  createGlobalStyle,
+  ThemeProvider,
+} from 'styled-components';
+
+import theme from '../src/theme.js';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -8,22 +13,27 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Roboto', sans-serif;
-    color: #3A3A3A;
+    color: ${(props) => props.theme.back};
   }
 
   a {
-    color: #8933cd;
+    color: ${(props) => props.theme.primary};
     font-weight: bold;
     text-decoration: none;
+    transition: 0.3s;
+  }
+
+  a:hover{
+    color: ${(props) => props.theme.primaryHover}
   }
 `;
 
 function App({ Component, pageProps }) {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   );
 }
 

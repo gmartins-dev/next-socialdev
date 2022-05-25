@@ -23,7 +23,7 @@ const StyledImage = styled.div`
 
 //todo conteudo interno da pagina
 const StyledContainer = styled.div`
-  background-color: white;
+  background-color: ${(props) => props.theme.back};
   padding: 30px 50px;
 
   @media (min-width: ${WIDTH_BREAK}) {
