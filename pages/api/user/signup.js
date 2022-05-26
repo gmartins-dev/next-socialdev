@@ -1,7 +1,7 @@
 import connect from 'next-connect';
 import Joi from 'joi';
 import validate from '../../../lib/middlewares/validation';
-import { signupUser } from '../../../modules/user/user.services';
+import { signupUser } from '../../../modules/user/user.service';
 import createHandler from '../../../lib/middlewares/nextConnect';
 
 //validação de dados para cadastro
