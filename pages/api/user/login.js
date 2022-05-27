@@ -3,6 +3,8 @@ import Joi from 'joi';
 import validate from '../../../lib/middlewares/validation';
 import { login } from '../../../modules/user/user.service';
 import createHandler from '../../../lib/middlewares/nextConnect';
+import { withIronSessionApiRoute } from 'iron-session/next';
+import { ironConfig } from '../../../lib/middlewares/ironSession';
 
 const loginSchema = Joi.object({
   userOrEmail: Joi.string().required(),
@@ -16,7 +18,12 @@ handler.post(
   async (req, res) => {
     try {
       const user = await login(req.body);
-      res.send(user);
+      req.session.user = {
+        id: user._id,
+        user: user.user,
+      };
+      await req.session.save();
+      res.send({ ok: true });
     } catch (err) {
       console.error(err);
       throw err;
@@ -24,4 +31,4 @@ handler.post(
   },
 );
 
-export default handler;
+export default withIronSessionApiRoute(handler, ironConfig);
