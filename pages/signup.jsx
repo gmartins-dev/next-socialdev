@@ -47,23 +47,39 @@ export default function SignupPage() {
 
       <Form onSubmit={handleSubmit(handleForm)}>
         <H2>Crie sua conta</H2>
-        <Input label="Nome" {...register('firstName')} />
+        <Input
+          label="Nome"
+          {...register('firstName')}
+          error={errors.firstName}
+        />
         <Input
           label="Sobrenome"
           {...register('lastName')}
+          error={errors.lastName}
         />
-        <Input label="Usuário" {...register('user')} />
+        <Input
+          label="Usuário"
+          {...register('user')}
+          error={errors.user}
+        />
         <Input
           label="Email"
           type="email"
           {...register('email')}
+          error={errors.email}
         />
         <Input
           label="Senha"
           type="password"
           {...register('password')}
+          error={errors.password}
         />
-        <Button type="submit">Entrar</Button>
+        <Button
+          type="submit"
+          disable={Object.keys(errors).length > 0}
+        >
+          Entrar
+        </Button>
       </Form>
       <Text>
         Já possui uma conta?
