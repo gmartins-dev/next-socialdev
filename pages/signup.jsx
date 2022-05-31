@@ -27,7 +27,7 @@ const Text = styled.p`
 
 export default function SignupPage() {
   const {
-    register,
+    control,
     handleSubmit,
     formState: { errors },
   } = useForm({
@@ -49,30 +49,30 @@ export default function SignupPage() {
         <H2>Crie sua conta</H2>
         <Input
           label="Nome"
-          {...register('firstName')}
-          error={errors.firstName}
+          name="firstName"
+          control={control}
         />
         <Input
           label="Sobrenome"
-          {...register('lastName')}
-          error={errors.lastName}
+          name="lastName"
+          control={control}
         />
         <Input
           label="Usuário"
-          {...register('user')}
-          error={errors.user}
+          name="user"
+          control={control}
         />
         <Input
           label="Email"
           type="email"
-          {...register('email')}
-          error={errors.email}
+          name="email"
+          control={control}
         />
         <Input
           label="Senha"
           type="password"
-          {...register('password')}
-          error={errors.password}
+          name="password"
+          control={control}
         />
         <Button
           type="submit"
