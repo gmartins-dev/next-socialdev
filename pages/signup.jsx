@@ -9,6 +9,9 @@ import Input from './../src/components/inputs/Input';
 import { useForm } from 'react-hook-form';
 import { joiResolver } from '@hookform/resolvers/joi';
 import { signupSchema } from '../modules/user/user.schema';
+import axios from 'axios';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
 
 const FormContainer = styled.div`
   margin-top: 60px;
@@ -26,16 +29,32 @@ const Text = styled.p`
 `;
 
 export default function SignupPage() {
+  const router = useRouter();
   const {
     control,
     handleSubmit,
     formState: { errors },
+    setError,
   } = useForm({
     resolver: joiResolver(signupSchema),
   });
 
-  const handleForm = (data) => {
-    console.log(data);
+  const handleForm = async (data) => {
+    try {
+      const { status } = await axios.post(
+        `${process.env.NEXT_PUBLIC_API}/api/user/signup`,
+        data,
+      );
+      if (status === 201) {
+        router.push('/');
+      }
+    } catch (err) {
+      if (err.response.data.code === 11000) {
+        setError(err.response.data.duplicatedKey, {
+          type: 'duplicated',
+        });
+      }
+    }
   };
 
   console.log(errors);

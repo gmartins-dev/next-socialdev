@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@hookform/resolvers": "^2.8.8",
+    "axios": "^0.26.0",
     "bcryptjs": "^2.4.3",
     "iron-session": "^6.0.5",
     "joi": "^17.6.0",
