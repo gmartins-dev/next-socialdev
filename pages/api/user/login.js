@@ -5,11 +5,7 @@ import { login } from '../../../modules/user/user.service';
 import createHandler from '../../../lib/middlewares/nextConnect';
 import { withIronSessionApiRoute } from 'iron-session/next';
 import { ironConfig } from '../../../lib/middlewares/ironSession';
-
-const loginSchema = Joi.object({
-  userOrEmail: Joi.string().required(),
-  password: Joi.string().required(),
-});
+import { loginSchema } from '../../../modules/user/user.schema';
 
 const handler = createHandler();
 
@@ -25,8 +21,7 @@ handler.post(
       await req.session.save();
       res.send({ ok: true });
     } catch (err) {
-      console.error(err);
-      throw err;
+      return res.status(400).send(err.message);
     }
   },
 );
