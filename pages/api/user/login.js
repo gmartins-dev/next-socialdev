@@ -1,5 +1,3 @@
-import connect from 'next-connect';
-import Joi from 'joi';
 import validate from '../../../lib/middlewares/validation';
 import { login } from '../../../modules/user/user.service';
 import createHandler from '../../../lib/middlewares/nextConnect';
