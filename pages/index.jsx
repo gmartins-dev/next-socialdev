@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { withIronSessionSsr } from 'iron-session/next';
 import { ironConfig } from '../lib/middlewares/ironSession.js';
@@ -8,7 +9,7 @@ import H3 from '../src/components/typography/H3';
 import Post from '../src/components/cards/Post';
 
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import useSWR from 'swr';
 
 const Content = styled.div`
   margin: 50px 0;
@@ -36,20 +37,14 @@ const PostContainer = styled.div`
   margin-top: 20px;
 `;
 
+const fetcher = (url) =>
+  axios.get(url).then((res) => res.data);
+
 function HomePage({ user }) {
-  const [data, setData] = useState([]);
-
-  const handlePosts = async () => {
-    const response = await axios.get(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/post`,
-    );
-
-    setData(response.data);
-  };
-
-  useEffect(() => {
-    handlePosts();
-  }, []);
+  const { data } = useSWR(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/post`,
+    fetcher,
+  );
 
   return (
     <>
@@ -64,7 +59,7 @@ function HomePage({ user }) {
             </RefreshPosts>
           </RefreshPostsContainer>
           <PostContainer>
-            {data.map((post) => (
+            {data?.map((post) => (
               <Post
                 key={post.id}
                 user={post.createdBy.user}
