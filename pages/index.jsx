@@ -56,10 +56,12 @@ function HomePage({ user }) {
           <PostContainer>
             {data?.map((post) => (
               <Post
-                key={post.id}
+                key={post._id}
+                id={post._id}
                 user={post.createdBy.user}
                 text={post.text}
                 date={post.createdDate}
+                isOwner={post.createdBy._id === user.id}
               />
             ))}
           </PostContainer>

@@ -5,7 +5,6 @@ import { signupUser } from '../../../modules/user/user.service';
 import createHandler from '../../../lib/middlewares/nextConnect';
 import { withIronSessionApiRoute } from 'iron-session/next';
 import { ironConfig } from '../../../lib/middlewares/ironSession';
-import { signupUser } from '../../../modules/user/user.service';
 import { signupSchema } from '../../../modules/user/user.schema';
 
 //validação de dados para cadastro
