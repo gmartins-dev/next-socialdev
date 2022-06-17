@@ -63,49 +63,48 @@ export default function SignupPage() {
     <ImageWithSpace>
       <H1># Social Dev</H1>
       <H4>Tudo que acontece no mundo dev, está aqui!</H4>
-
-      <Form onSubmit={handleSubmit(handleForm)}>
-        <H2>Crie sua conta</H2>
-        <Input
-          label="Nome"
-          name="firstName"
-          control={control}
-        />
-        <Input
-          label="Sobrenome"
-          name="lastName"
-          control={control}
-        />
-        <Input
-          label="Usuário"
-          name="user"
-          control={control}
-        />
-        <Input
-          label="Email"
-          type="email"
-          name="email"
-          control={control}
-        />
-        <Input
-          label="Senha"
-          type="password"
-          name="password"
-          control={control}
-        />
-        <Button
-          type="submit"
-          disable={Object.keys(errors).length > 0}
-        >
-          Entrar
-        </Button>
-      </Form>
-      <Text>
-        Já possui uma conta?
-        <Link href="/login"> Faça seu login</Link>
-      </Text>
-
-      <FormContainer></FormContainer>
+      <FormContainer>
+        <Form onSubmit={handleSubmit(handleForm)}>
+          <H2>Crie sua conta</H2>
+          <Input
+            label="Nome"
+            name="firstName"
+            control={control}
+          />
+          <Input
+            label="Sobrenome"
+            name="lastName"
+            control={control}
+          />
+          <Input
+            label="Usuário"
+            name="user"
+            control={control}
+          />
+          <Input
+            label="Email"
+            type="email"
+            name="email"
+            control={control}
+          />
+          <Input
+            label="Senha"
+            type="password"
+            name="password"
+            control={control}
+          />
+          <Button
+            type="submit"
+            disable={Object.keys(errors).length > 0}
+          >
+            Cadastrar
+          </Button>
+        </Form>
+        <Text>
+          Já possui uma conta?
+          <Link href="/login"> Faça seu login</Link>
+        </Text>
+      </FormContainer>
     </ImageWithSpace>
   );
 }
