@@ -1,11 +1,11 @@
 const theme = {
   primary: '#1DB954',
   primaryHover: '#1ED760',
-  inputBackground: '#F5F5F5',
+  inputBackground: '#CEDEE6',
   inputBorder: '#E6E6E6',
-  background: '#ECECEC',
+  background: '#B2ECE6',
   black: '#191414',
-  white: '#FFFFFF',
+  white: '#F1F3F4',
   error: '#D95550',
   disabled: 'gray',
 };
