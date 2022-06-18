@@ -85,8 +85,10 @@ export default function LoginPage() {
             Entrar
           </Button>
         </Form>
-        <Text>Não possui uma conta?</Text>
-        <Link href="/signup"> Faça seu cadastro</Link>
+        <Text>
+          Não possui uma conta?
+          <Link href="/signup"> Faça seu cadastro</Link>
+        </Text>
       </FormContainer>
     </ImageWithSpace>
   );
