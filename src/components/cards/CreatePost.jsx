@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { H4 } from './../typography/H4';
-import ControlledTextarea from '../inputs/ControlledTextarea';
 import { Button } from './../inputs/Button';
 import { joiResolver } from '@hookform/resolvers/joi';
 import { createPostSchema } from '../../../modules/post/post.schema.js';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useSWRConfig } from 'swr';
+import ControlledTextarea from '../inputs/ControlledTextarea';
 
 const PostContainer = styled.div`
   background-color: ${(props) => props.theme.white};

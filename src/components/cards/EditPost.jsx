@@ -2,8 +2,8 @@ import { useForm } from 'react-hook-form';
 import { joiResolver } from '@hookform/resolvers/joi';
 import axios from 'axios';
 import { createPostSchema } from '../../../modules/post/post.schema';
-import ControlledTextarea from '../inputs/ControlledTextarea';
 import Button from '../inputs/Button';
+import ControlledTextarea from '../inputs/ControlledTextarea';
 
 const EditPost = ({ id, text, onSave }) => {
   const {
