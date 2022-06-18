@@ -45,7 +45,7 @@ export default function SignupPage() {
     try {
       setLoading(true);
       const { status } = await axios.post(
-        `${process.env.NEXT_PUBLIC_API}/api/user/signup`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/user/signup`,
         data,
       );
       if (status === 201) {
