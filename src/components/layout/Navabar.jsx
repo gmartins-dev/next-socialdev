@@ -3,7 +3,8 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 
 const StyledNavbar = styled.div`
-  background-color: ${(props) => props.theme.white};
+  background-color: ${(props) =>
+    props.theme.inputBackground};
   height: 80px;
   display: flex;
   align-items: center;

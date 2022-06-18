@@ -12,6 +12,7 @@ const StyledImage = styled.div`
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #83c4b3;
 
   width: 100%;
   height: 100vh;
@@ -58,7 +59,7 @@ function ImageWithSpace({ children, image }) {
 }
 
 ImageWithSpace.defaultProps = {
-  image: '/body-bg-img.png',
+  image: '/teste-bg2.png',
 };
 
 export default ImageWithSpace;
