@@ -11,6 +11,7 @@ import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 import { joiResolver } from '@hookform/resolvers/joi';
 import { loginSchema } from '../modules/user/user.schema';
+import { useState } from 'react';
 
 const FormContainer = styled.div`
   margin-top: 60px;
@@ -38,8 +39,11 @@ export default function LoginPage() {
     resolver: joiResolver(loginSchema),
   });
 
+  const [loading, setLoading] = useState(false);
+
   const onSubmit = async (data) => {
     try {
+      setLoading(true);
       const { status } = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/api/user/login`,
         data,
@@ -57,6 +61,8 @@ export default function LoginPage() {
           message: 'Usuário ou e-mail não encontrado.',
         });
       }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -79,7 +85,7 @@ export default function LoginPage() {
             control={control}
           />
           <Button
-            loading={true}
+            loading={loading}
             type="submit"
             disable={Object.keys(errors).length > 0}
           >

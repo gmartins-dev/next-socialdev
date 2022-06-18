@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useSWRConfig } from 'swr';
 import ControlledTextarea from '../inputs/ControlledTextarea';
+import { useState } from 'react';
 
 const PostContainer = styled.div`
   background-color: ${(props) => props.theme.white};
@@ -53,14 +54,25 @@ function CreatePost({ username }) {
     mode: 'all',
   });
 
+  const [loading, setLoading] = useState(false);
+
   const onSubmit = async (data) => {
-    const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/post`,
-      data,
-    );
-    if (response.status === 201) {
-      reset();
-      mutate(`${process.env.NEXT_PUBLIC_API_URL}/api/post`);
+    try {
+      setLoading(true);
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/post`,
+        data,
+      );
+      if (response.status === 201) {
+        reset();
+        mutate(
+          `${process.env.NEXT_PUBLIC_API_URL}/api/post`,
+        );
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -85,7 +97,7 @@ function CreatePost({ username }) {
           <BottomText>
             A sua mensagem sera pública.
           </BottomText>
-          <Button disabled={!isValid}>
+          <Button loading={loading} disabled={!isValid}>
             Postar Mensagem
           </Button>
         </BottomContainer>

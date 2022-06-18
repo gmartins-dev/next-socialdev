@@ -39,8 +39,11 @@ export default function SignupPage() {
     resolver: joiResolver(signupSchema),
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleForm = async (data) => {
     try {
+      setLoading(true);
       const { status } = await axios.post(
         `${process.env.NEXT_PUBLIC_API}/api/user/signup`,
         data,
@@ -54,6 +57,8 @@ export default function SignupPage() {
           type: 'duplicated',
         });
       }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -94,6 +99,7 @@ export default function SignupPage() {
             control={control}
           />
           <Button
+            loading={loading}
             type="submit"
             disable={Object.keys(errors).length > 0}
           >
