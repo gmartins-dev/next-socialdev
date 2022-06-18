@@ -79,6 +79,7 @@ export default function LoginPage() {
             control={control}
           />
           <Button
+            loading={true}
             type="submit"
             disable={Object.keys(errors).length > 0}
           >
