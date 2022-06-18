@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { H4 } from './../typography/H4';
-import { Button } from './../inputs/Button';
+import Button from './../inputs/Button';
 import { joiResolver } from '@hookform/resolvers/joi';
 import { createPostSchema } from '../../../modules/post/post.schema.js';
 import { useForm } from 'react-hook-form';
