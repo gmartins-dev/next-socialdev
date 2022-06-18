@@ -12,7 +12,7 @@ import { useState } from 'react';
 const PostContainer = styled.div`
   background-color: ${(props) => props.theme.white};
   padding: 20px 40px;
-
+  border-radius: 10px;
   @media (max-width: 500px) {
     padding: 20px;
   }
