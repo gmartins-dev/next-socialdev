@@ -80,7 +80,8 @@ function CreatePost({ username }) {
     <PostContainer>
       <H4>
         <Title>
-          No que voce está pensando, @{username}?
+          Quais são suas músicas, playlists ou podcasts
+          favoritos do Spotify, @{username}?
         </Title>
       </H4>
       <form onSubmit={handleSubmit(onSubmit)}>

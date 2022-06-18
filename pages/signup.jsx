@@ -66,8 +66,11 @@ export default function SignupPage() {
 
   return (
     <ImageWithSpace>
-      <H1># Social Dev</H1>
-      <H4>Tudo que acontece no mundo dev, está aqui!</H4>
+      <H1>🎶Social Spot</H1>
+      <H4>
+        Compartilhe suas músicas, playlists e podcasts
+        favoritos!
+      </H4>
       <FormContainer>
         <Form onSubmit={handleSubmit(handleForm)}>
           <H2>Crie sua conta</H2>

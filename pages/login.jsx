@@ -68,8 +68,11 @@ export default function LoginPage() {
 
   return (
     <ImageWithSpace>
-      <H1># Social Dev</H1>
-      <H4>Tudo que acontece no mundo dev, está aqui!</H4>
+      <H1>🎶Social Spot</H1>
+      <H4>
+        Compartilhe suas músicas, playlists e podcasts
+        favoritos!
+      </H4>
       <FormContainer>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <H2>Entre em sua conta</H2>

@@ -36,7 +36,7 @@ function Navbar() {
 
   return (
     <StyledNavbar>
-      <StyledLogo># Social Dev</StyledLogo>
+      <StyledLogo>🎶Social Spot</StyledLogo>
       <div>
         <StyledLogout onClick={handleLogout}>
           Desconectar
