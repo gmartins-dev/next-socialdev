@@ -53,6 +53,10 @@ This project was developed with the following technologies:
 ## 💻 Demonstration
 
 </br>
+
+<h5 align="center"> 🔗 Online: https://next-socialdev.vercel.app</h5>
+
+</br>
 <p  align="center">
   <kbd>
 <img width="100%" style="border-radius: 5px" height="70%" src="https://images2.imgbox.com/3b/2a/FEwP5IGn_o.png" alt="">
