@@ -1,27 +1,17 @@
-# Next.js Full Stack Project
-
-- Projeto finalizado, 18/06/22
-
-- Mais detalhes sobre:
-https://www.linkedin.com/feed/update/urn:li:activity:6943963293325643776/
-
-- Online: https://next-socialdev.vercel.app/
-
-
 
   
 
-<p  align="center">
+<div  align="center">
 
-<img  alt="Guilherme Martins - Frontend Developer"  src="https://images2.imgbox.com/dc/b1/MUltd8Qt_o.png" height="250"  width="800"  />
+<img  alt="Guilherme Martins - Frontend Developer"  src="https://images2.imgbox.com/ae/e8/W7QmciDO_o.png" width="40%"  />
 
-</p>
+</div>
 
   
 
 <h1  align="center">
 
-🐥 Flapbird  - React Native Mobile Game App 🕹
+🎶 "ShareSpot" - Full-stack Web Application 🌐
 
 </h1>
 
@@ -31,8 +21,12 @@ https://www.linkedin.com/feed/update/urn:li:activity:6943963293325643776/
 
 ## 🗃 Project
 
+FullStack Next.Js application - “ShareSpot” in reference to Spotify,
+the idea was basically to build a social network to share your favorite songs, playlists, and podcasts.
 
-React Native Mobile Game App using React Native Engine and MatterJS.
+Complete Full Stack JavaScript project built using Next.js in both Backend and Frontend.
+
+</br>
 
 
 
@@ -41,86 +35,88 @@ React Native Mobile Game App using React Native Engine and MatterJS.
 This project was developed with the following technologies:
 
   <img  align="center"  alt="JavaScript"  height="30"  width="30"  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"> **JavaScript**
+  
+  <img  align="center"  alt="NextJs"  height="30"  width="30"  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg"> **NextJs**
+    
+  <img  align="center"  alt="React"  height="30"  width="30"  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"> **React**
 
-  <img  align="center"  alt="React Native"  height="30"  width="30"  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"> **React Native**
+ <img align="center" alt="Node" height="30" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"> **NodeJs**
+ 
+   <img  align="center"  alt="MongoDB"  height="30"  width="30"  src="https://www.svgrepo.com/show/331488/mongodb.svg"> **MongoDB**
+ 
+  <img  align="center"  alt="StyledComponents"  height="30"  width="30"  src="https://cdn.worldvectorlogo.com/logos/styled-components-1.svg"> **Styled Components**
+  
 
-  <img  align="center"  alt="Expo"  height="30"  width="30"  src="https://play-lh.googleusercontent.com/algsmuhitlyCU_Yy3IU7-7KYIhCBwx5UJG4Bln-hygBjjlUVCiGo1y8W5JNqYm9WW3s"> **Expo**
-
-
-
-
-## 📕 Libraries
-
-
-This project used the following libraries:
-
-- [Reactive Native Engine](https://github.com/bberak/react-game-engine)
-
-- [MatterJS](https://brm.io/matter-js/)
+</br>
 
 
 ## 💻 Demonstration
 
-
+</br>
 <p  align="center">
   <kbd>
-<img width="615" style="border-radius: 5px" height="450" src="https://github.com/guilhermemm-dev/mobile-flappybird/blob/main/flap-gif.gif" alt="">
+<img width="100%" style="border-radius: 5px" height="70%" src="https://images2.imgbox.com/3b/2a/FEwP5IGn_o.png" alt="">
 </kbd>
 </p>
 
 <p align="center">
 <kbd>
-<img width="300" style="border-radius: 5px" height="450" src="https://images2.imgbox.com/d9/00/u3hDmTAb_o.png" alt="">
-</kbd>
-<kbd>
-<img width="300" style="border-radius: 5px" height="450" src="https://images2.imgbox.com/45/4d/n2L9LWv6_o.png" alt="">
+<img width="300" style="border-radius: 5px" height="600" src="https://images2.imgbox.com/67/67/AFCB4NMH_o.png" alt="">
 </kbd>
 </p>
 
 <p align="center">
 <kbd>
-<img width="300" style="border-radius: 5px" height="450" src="https://images2.imgbox.com/fb/a8/a2BFIMgn_o.png" alt="">
+<img width="300" style="border-radius: 5px" height="600" src="https://images2.imgbox.com/67/67/AFCB4NMH_o.png" alt="">
 </kbd>
 <kbd>
-<img width="300" style="border-radius: 5px" height="450" src="https://images2.imgbox.com/13/e9/Dm3Goluu_o.png" alt="">
+<img width="300" style="border-radius: 5px" height="600" src="https://images2.imgbox.com/34/2a/Ds4GyE3o_o.png" alt="">
 </kbd>
 </p>
 
+<p align="center">
+<kbd>
+<img width="300" style="border-radius: 5px" height="600" src="https://images2.imgbox.com/8c/72/oCASlfnU_o.png" alt="">
+</kbd>
+<kbd>
+<img width="300" style="border-radius: 5px" height="600" src="https://images2.imgbox.com/c4/85/OKRzXTTD_o.png" alt="">
+</kbd>
+</p>
+
+
+
+</br>
 
 ## 🚀 How to run
 
-
 If you want to run the project on your local machine, just follow the steps below:
 
-
 ```bash
-
-$ git clone https://github.com/guilhermemm-dev/mobile-flappybird
-
-$ cd mobile-flappybird
-
-```
-
-To start it, follow the steps below:
-
-```bash
+$ git clone https://github.com/guilhermemm-dev/world-cup-project
 
 # Install the dependencies
 
-$ yarn or npm install
+$ yarn install or npm install
+```
 
- 
-# Start the application
+- Run backend server:
 
-$ yarn start or npm run dev
+```bash
+$ cd backend
+npm run dev
 
 ```
 
-The application will be available in your browser at the address http://localhost:3000.
+- Run web/desktop applicaton:
 
-  
-  
-  
+```bash
+$ cd frontend
+npm run dev
+
+```
+
+
+</br>
 
 ## 📝 License
 
@@ -136,9 +132,9 @@ This project is licensed under the MIT license.
 
   
   
-
+</br>
 <hr/>
-
+</br>
   
 
 
